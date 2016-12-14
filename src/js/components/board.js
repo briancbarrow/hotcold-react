@@ -48,10 +48,10 @@ export class Board extends React.Component {
       if(diff === 0) {
         let numGuesses = this.props.state.guesses.length;
         let distanceFeedback = "You Win!";
-        let directionFeedback = "";
+        let directionFeedback = "";        
+        this.props.guessNumber(guess);
         this.props.updateDirFeedback(directionFeedback);
         this.props.updateDistFeedback(distanceFeedback);
-        this.props.guessNumber(guess);
         if(numGuesses < this.props.fewest) {
           this.props.postFewest(numGuesses + 1);
         }
