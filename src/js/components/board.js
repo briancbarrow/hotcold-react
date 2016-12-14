@@ -51,6 +51,7 @@ export class Board extends React.Component {
         let directionFeedback = "";
         this.props.updateDirFeedback(directionFeedback);
         this.props.updateDistFeedback(distanceFeedback);
+        this.props.guessNumber(guess);
         if(numGuesses < this.props.fewest) {
           this.props.postFewest(numGuesses + 1);
         }
@@ -72,8 +73,6 @@ export class Board extends React.Component {
           this.props.guessNumber(guess);
           this.props.updateDistance(absDiff);
         }
-
-
     }
 
     render() {
