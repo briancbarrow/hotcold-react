@@ -15,7 +15,6 @@ export class Board extends React.Component {
         // this.updateDistFeedback = this.updateDistFeedback.bind(this);
         // this.updateDistance = this.updateDistance.bind(this);
         // this.getFewest = this.getFewest.bind(this);
-        console.log(props);
     }
 
 
@@ -23,7 +22,6 @@ export class Board extends React.Component {
     handleSubmit(event) {
       event.preventDefault();
       const guess = event.target.guessInput.value;
-      console.log(this.props)
       event.target.guessInput.value = "";
       const diff = guess - this.props.state.number;
       const absDiff = Math.abs(diff);
@@ -48,7 +46,7 @@ export class Board extends React.Component {
       if(diff === 0) {
         let numGuesses = this.props.state.guesses.length;
         let distanceFeedback = "You Win!";
-        let directionFeedback = "";        
+        let directionFeedback = "";
         this.props.guessNumber(guess);
         this.props.updateDirFeedback(directionFeedback);
         this.props.updateDistFeedback(distanceFeedback);

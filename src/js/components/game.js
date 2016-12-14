@@ -11,7 +11,6 @@ class Game extends React.Component {
 
     componentWillMount() {
       this.props.getFewest();
-      console.log(this.props)
     }
 
     //This button will display Modal Component

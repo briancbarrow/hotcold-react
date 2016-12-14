@@ -77,7 +77,6 @@ export const postFewest = (number) => {
     })
     .then(response => response.json())
     .then(data => {
-      console.log(data)
       dispatch(updateFewestState(data.fewest))
     })
   }
