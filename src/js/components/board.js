@@ -64,7 +64,7 @@ export class Board extends React.Component {
           } else if (absDiff <= 30) {
             let distanceFeedback = "Chilly"
             this.props.updateDistFeedback(distanceFeedback);
-          } else if (absDiff <= 50) {
+          } else if (absDiff <= 100) {
             let distanceFeedback = "COLD"
             this.props.updateDistFeedback(distanceFeedback);
           }
