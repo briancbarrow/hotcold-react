@@ -81,7 +81,6 @@ export class Board extends React.Component {
                     <input type="number" name="guessInput" placeholder="Enter your Guess" />
                     <button type="submit">Guess</button>
                 </form>
-                <button onClick={() => this.props.getFewest()}>Get Fewest</button>
                 <GuessCount guesses={this.props.guessArr} />
                 <FewestCount fewest={this.props.fewest} />
                 <GuessList guesses={this.props.guessArr} />
